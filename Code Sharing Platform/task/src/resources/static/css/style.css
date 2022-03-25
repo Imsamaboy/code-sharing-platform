@@ -1,0 +1,19 @@
+span {
+    border: 3px crimson;
+    background: beige;
+    width: 100px;
+    height: 50px;
+}
+
+pre {
+    border: 3px solid purple;
+    background-color: gray;
+    width: 500px;
+    height: 200px;
+}
+
+textarea {
+    width: 500px;
+    height: 500px;
+    background-color: gray;
+}

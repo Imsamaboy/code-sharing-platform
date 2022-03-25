@@ -1,19 +1,17 @@
-<html xmlns:th="http://thymeleaf.org">
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" lang="en">
     <head>
-        <title>Code</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta charset="UTF-8">
+        <title>Create</title>
         <link th:href="@{/css/style.css}" rel="stylesheet"/>
+        <script type="text/javascript" th:src="@{/js/send.js}"></script>
         <link rel="stylesheet"
               href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/default.min.css">
         <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
     </head>
     <body>
-        <div>
-            <span id="load_date" th:text="${dateOnHtml}"></span>
-            <div>
-                <pre><code th:text="${codeOnHtml}"></code></pre>
-            </div>
-        </div>
+        <textarea id="code_snippet">//write your code here</textarea>
+        <button id="send_snippet" type="submit" th:onclick="send()">Submit</button>
     </body>
 </html>

@@ -1,6 +1,6 @@
 <html xmlns:th="http://thymeleaf.org">
     <head>
-        <title>Code</title>
+        <title>Latest</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <link th:href="@{/css/style.css}" rel="stylesheet"/>
         <link rel="stylesheet"
@@ -9,10 +9,13 @@
         <script>hljs.initHighlightingOnLoad();</script>
     </head>
     <body>
-        <div>
-            <span id="load_date" th:text="${dateOnHtml}"></span>
+        <div th:each="code : ${codes}">
+            <span th:text="${code.date}">
+            </span>
             <div>
-                <pre><code th:text="${codeOnHtml}"></code></pre>
+                <pre>
+                    <code th:text="${code.code}"></code>
+                </pre>
             </div>
         </div>
     </body>
